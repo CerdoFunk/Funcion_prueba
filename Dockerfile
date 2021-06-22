@@ -5,4 +5,5 @@ RUN pip install \
     black \
     flake8 \
     pylint \
-    pytest
+    pytest \
+    pytest-mpl
