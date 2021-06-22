@@ -45,5 +45,6 @@ def funcion_juego(df):
     plt.title("Titulo de la gráfica")
     return figure
 
+
 if __name__ == "__main__":
     funcion_juego(df)
