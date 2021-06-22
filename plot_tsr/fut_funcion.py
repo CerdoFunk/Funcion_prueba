@@ -25,7 +25,7 @@ def funcion_juego(df):
 
     df["paises"] = pd.Categorical(df["paises"])
     # color = np.where(x < 1, 'k', np.where(y < 5, 'b', 'r'))
-    plt.figure(figsize=(10, 10))
+    figure = plt.figure(figsize=(10, 10))
 
     # s es el diámetro de la burbuja*10 para hacer más visibles los puntos en este caso en particular
     # c es el color dependiendo del país que se seleccione. x e y son los ejes que generan los puntos en el diagrama de dispersión.
@@ -43,7 +43,6 @@ def funcion_juego(df):
     plt.xlabel("tsr")
     plt.ylabel("puntos")
     plt.title("Titulo de la gráfica")
-    return plt.show()
-
+    return figure
 
 funcion_juego(df)
