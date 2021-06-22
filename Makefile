@@ -3,9 +3,9 @@
 install:
 	pip install .
 
-set_tests: install
+tests/baseline/test_funcion_juego.png: install
 	mkdir --parents tests/baseline
 	pytest --mpl-generate-path tests/baseline/
 
-tests:
+tests: set_tests
 	pytest
