@@ -1,4 +1,4 @@
-.PHONY: clean install tests
+.PHONY: clean install tests tests_setup
 
 clean:
 	rm --force --recursive tests/baseline
@@ -7,9 +7,9 @@ clean:
 install:
 	pip install .
 
-tests/baseline/test_funcion_juego.png: install
+tests_setup: install
 	mkdir --parents tests/baseline
 	pytest --mpl-generate-path tests/baseline/
 
-tests: tests/baseline/test_funcion_juego.png
-	pytest
+tests: 
+	pytest --mpl
