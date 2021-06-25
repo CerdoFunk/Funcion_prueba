@@ -7,6 +7,8 @@ import random
 
 # Un dataframe random pa´jugar. Considerando que tsr entre [0, 1], puntos entre [0,114] y num_goles entre [0,100]
 # se genera un dataframe con 10 renglones y 3 columnas que seran tsr, puntos y num_goles
+random.seed(10)
+np.random.seed(seed=10)
 df = pd.DataFrame(
     [random.uniform(0, 1), np.random.randint(0, 115), np.random.randint(0, 100)] for i in range(10)
 )
@@ -42,7 +44,7 @@ def funcion_juego(df):
 
     plt.xlabel("tsr")
     plt.ylabel("puntos")
-    plt.title("Titulo de la gráfica")
+    plt.title("Título de la gráfica")
     return figure
 
 
