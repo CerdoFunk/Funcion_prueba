@@ -5,11 +5,11 @@ clean:
 	rm --force --recursive tests/__pycache__
 
 install:
-	pip install .
+	pip install . --upgrade
 
 tests_setup: install
 	mkdir --parents tests/baseline
 	pytest --mpl-generate-path tests/baseline/
 
-tests: 
+tests: install
 	pytest --mpl
