@@ -1,8 +1,9 @@
 .PHONY: clean install tests tests_setup
 
 clean:
+	rm --force --recursive .pytest_cache
 	rm --force --recursive tests/baseline
-	rm --force --recursive tests/__pycache__
+	rm --force --recursive **/__pycache__
 
 install:
 	pip install . --upgrade
