@@ -1,0 +1,22 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+author = "Nahuel"
+author-email = ""
+classifiers = [ 
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+description-file = "README.md"
+home-page = "https://github.com/CerdoFunk/Funcion_prueba"
+module = "plot_tsr"
+requires = [
+    "matplotlib",
+    "numpy",
+    "pandas",
+]
+requires-python=">=3"
